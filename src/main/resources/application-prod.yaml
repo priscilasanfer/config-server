@@ -1,0 +1,28 @@
+server:
+  port: ${PORT}
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/priscilasanfer/ead-config-server-repo.git
+          default-label: main
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASSWORD}
+
+encrypt:
+  KEY: ${ENCRYPT_KEY}
+
+ead:
+  configServer:
+    username: ${CONFIG_SERVER_USERNAME}
+    password: ${CONFIG_SERVER_PASSWORD}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL}
+    instance:
+      hostname: ${APP_DOMAIN_NAME}
+      non-secure-port: 80
