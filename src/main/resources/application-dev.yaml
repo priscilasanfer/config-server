@@ -14,10 +14,10 @@ spring:
 ead:
   configServer:
     username: configserver
-    password: 'ead123cs'
+    password: ${CONFIG_SERVER_PASSWORD}
   serviceRegistry:
     username: serviceregistry
-    password: 'ead123sr'
+    password: ${SERVICE_REGISTRY_PASSWORD}
 
 eureka:
   client:
